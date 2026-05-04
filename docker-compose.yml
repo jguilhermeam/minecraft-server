@@ -1,0 +1,21 @@
+services:
+  minecraft-bedrock:
+    image: itzg/minecraft-bedrock-server
+    container_name: minecraft
+    ports:
+      - "19132:19132/udp"
+    environment:
+      EULA: "TRUE"
+      GAMEMODE: survival
+      DIFFICULTY: easy
+      LEVEL_NAME: "BedrockWorld"
+      MAX_PLAYERS: 5
+      ALLOW_CHEATS: "false"
+      ONLINE_MODE: "true"
+      WHITE_LIST: "true"
+      VIEW_DISTANCE: 10
+      TICK_DISTANCE: 4
+      TZ: "America/Manaus"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
