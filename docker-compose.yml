@@ -9,7 +9,7 @@ services:
       EULA: "TRUE"
       GAMEMODE: survival
       DIFFICULTY: easy
-      LEVEL_NAME: "BedrockWorld"
+      LEVEL_NAME: "YOUR_WORLD_NAME"
       MAX_PLAYERS: 5
       ALLOW_CHEATS: "false"
       ONLINE_MODE: "true"
@@ -17,7 +17,7 @@ services:
       VIEW_DISTANCE: 10
       TICK_DISTANCE: 4
       TZ: "America/Manaus"
-      SERVER_UDP_PORTS: "44.201.58.141:19140-19155:19140-19155"
+      SERVER_UDP_PORTS: "PUBLIC_IP:19140-19155:19140-19155"
     volumes:
       - ./data:/data
     restart: unless-stopped
