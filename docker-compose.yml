@@ -3,7 +3,8 @@ services:
     image: itzg/minecraft-bedrock-server
     container_name: minecraft
     ports:
-      - "19132:19132/udp"
+      - "19132:19132/tcp"
+      - "19140-19155:19140-19155/udp" 
     environment:
       EULA: "TRUE"
       GAMEMODE: survival
@@ -16,6 +17,7 @@ services:
       VIEW_DISTANCE: 10
       TICK_DISTANCE: 4
       TZ: "America/Manaus"
+      SERVER_UDP_PORTS: "44.201.58.141:19140-19155:19140-19155"
     volumes:
       - ./data:/data
     restart: unless-stopped
